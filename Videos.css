@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.headerBox {
+  height: 16vh;
+  width: 100vw;
+}
+.header {
+  padding: 60px;
+  text-align: center;
+  background-image: url(Photos/AllCharacters.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 61.25vh;
+}
+.BoxOfMovies {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.gallery {
+  border: 1px solid #ccc;
+}
+
+.gallery:hover {
+  border: 1px solid #777;
+}
+
+.gallery img {
+  width: 100%;
+  height: 30vh;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+iframe {
+  width: 560;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-image: url(Photos/footer.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 33vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+}
+
+@media screen and (max-width: 800px) {
+  .row,
+  .navbar {
+    flex-direction: column;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
