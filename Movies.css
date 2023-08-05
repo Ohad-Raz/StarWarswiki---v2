@@ -50,7 +50,8 @@ body {
 }
 
 .responsive {
-  padding: 0 6px;
+  padding: 0 10px;
+  padding-bottom: 10px;
   float: left;
   width: 24.99999%;
 }
