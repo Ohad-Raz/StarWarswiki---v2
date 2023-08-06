@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  background-color: #333;
+  position: sticky;
+  width: 100%;
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main {
+  flex: 100%;
+  background-color: white;
+  padding: 20px;
+  background-image: url(Photos/naboo.jpg);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.contactform {
+  text-align: center;
+  font-size: 34px;
+  flex-direction: column;
+  margin: auto;
+}
+textarea {
+  width: 45%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid rgba(250, 235, 215, 0.321);
+  border-radius: 4px;
+  background-color: #f8f8f83a;
+  resize: none;
+}
+
+textarea:focus {
+  background-color: #f8f8f8d6;
+  transition-duration: 0.8s;
+  text-shadow: #9490900c 4px 4px 4px;
+}
+
+input {
+  border-radius: 4px;
+  border-color: rgba(250, 235, 215, 0.342);
+  background-color: #f8f8f83a;
+  transition-duration: 0.9s;
+  text-shadow: #9490900c 4px 4px 4px;
+  padding: 5px;
+  text-align: left;
+}
+
+input:focus {
+  background-color: #f8f8f8d6;
+}
+button {
+  width: 220px;
+  height: 50px;
+  background-color: rgba(250, 235, 215, 0.699);
+  background-color: #f8f8f89b;
+  border-radius: 10px;
+  font-size: 17px;
+  border-bottom: antiquewhite;
+}
+button {
+  transition-duration: 0.6s;
+}
+
+button:hover {
+  background-color: #4c77af6c;
+  color: white;
+
+  text-shadow: rgba(36, 38, 39, 0.698) 4px 4px 4px;
+}
+
+.box3 {
+  display: flex;
+  margin: 0 auto;
+  width: 880px;
+  padding: 20px;
+  background: rgba(250, 235, 215, 0.277);
+  border: 2px solid #333;
+  border-color: rgba(250, 235, 215, 0.685);
+  border-radius: 18px;
+}
+
+select {
+  width: 220px;
+  height: 50px;
+  background-color: #f8f8f83a;
+  border-color: #4c77af6c;
+  border-radius: 10px;
+  font-size: 17px;
+  text-align: center;
+  transition-duration: 0.6s;
+  text-shadow: #9490900c 4px 4px 4px;
+}
+
+select:focus {
+  background-color: #f8f8f8d6;
+}
+
+.stayintouch {
+  font-size: 34px;
+  font-family: Garamond;
+  margin-left: 245px;
+  color: antiquewhite;
+  margin-top: 30px;
+  margin-bottom: 65px;
+}
+.boxLinks {
+}
+
+@media screen and (max-width: 800px) {
+  .row,
+  .box3,
+  .navbar {
+    flex-direction: column;
+  }
+  .box3 {
+  }
+  body {
+    overflow-x: hidden;
+  }
+}

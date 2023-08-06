@@ -8,8 +8,6 @@ body {
   margin: 0;
   max-width: 100%;
   overflow-x: hidden;
-  background-image: url(Photos/ATAT.jpg);
-  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -24,23 +22,56 @@ body {
   background-image: url(Photos/AllCharacters.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
+
   height: 61.25vh;
+}
+
+.VideoContainer {
+  background-image: url(Photos/kylovsray.jpg);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-top: 2%;
+}
+h2 {
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  border-color: #d4ecff;
+  text-shadow: 1px 1px 1px#d4ecff, 1px 1px 5px #d4ecff, 1px 1px 1px #d4ecff;
 }
 .BoxOfMovies {
   margin-left: 5vw;
   margin-right: 5vw;
 }
 
-.gallery {
+.Item {
   border: 1px solid #ccc;
+  background-color: #7777774f;
+  color: white;
+  box-shadow: 5px 5px 8px rgba(145, 168, 208, 0.077),
+    10px 10px 8px rgba(145, 168, 208, 0.071),
+    15px 15px 8px rgba(145, 168, 208, 0.027);
+  border-radius: 2%;
+}
+.Item {
+  animation: blink1 12s;
+  animation-iteration-count: infinite;
 }
 
-.gallery:hover {
+@keyframes blink1 {
+  50% {
+    border-color: #d4ecff;
+    box-shadow: 1px 1px 1px#d4ecff, 1px 1px 5px #d4ecff, 1px 1px 1px #d4ecff;
+  }
+}
+.Item:hover {
   border: 1px solid #777;
+  background-color: #dddddd8f;
+  transition: 1s;
 }
 
-.gallery img {
+.Item img {
   width: 100%;
   height: 30vh;
 }
@@ -54,7 +85,7 @@ body {
   box-sizing: border-box;
 }
 
-.responsive {
+.ItemsGrid {
   padding: 0 10px;
   padding-bottom: 10px;
   float: left;
@@ -62,14 +93,14 @@ body {
 }
 
 @media only screen and (max-width: 700px) {
-  .responsive {
+  .ItemsGrid {
     width: 49.99999%;
     margin: 6px 0;
   }
 }
 
 @media only screen and (max-width: 520px) {
-  .responsive {
+  .ItemsGrid {
     width: 100%;
   }
 }
@@ -80,22 +111,11 @@ body {
   clear: both;
 }
 
-.footer {
-  padding: 20px;
-  text-align: center;
-  background-image: url(Photos/footer.jpg);
-  background-size: cover;
-  width: 100vw;
-  height: 33vh;
-  display: flex;
-  flex-wrap: wrap;
-  flex-flow: column;
-}
-
 @media screen and (max-width: 800px) {
   .row,
   .navbar {
     flex-direction: column;
+    overflow-x: hidden;
   }
   body {
     overflow-x: hidden;

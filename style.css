@@ -8,6 +8,7 @@ body {
   margin: 0;
   max-width: 100%;
   overflow-x: hidden;
+  font-size: 1.1em;
 }
 
 .headerBox {
@@ -20,8 +21,12 @@ body {
   background-image: url(Photos/AllCharacters.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
+  color: rgb(80, 204, 241);
+  font-weight: 600;
+  font-size: 1.4em;
   height: 45vh;
+  text-shadow: 5px 5px 8px rgba(43, 48, 58, 0.568),
+    10px 10px 8px rgba(42, 48, 59, 0.219), 15px 15px 8px rgba(33, 40, 53, 0);
 }
 
 .aboveheader {
@@ -39,23 +44,46 @@ body {
 
 .navbar {
   display: flex;
-  background-color: #333;
+
   position: sticky;
   width: 100%;
+  top: 0;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  --darkblue: #5b5c66;
+  --lightblue: #00f0ff;
+  background-color: var(--darkblue);
+  border: 4px solid var(--lightblue);
+  box-shadow: 0 0 15px var(--lightblue), inset 0 0 15px var(--lightblue);
 }
 
-/* Style the navigation bar links */
 .navbar a {
   color: white;
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
+  border-radius: 2px;
 }
 
-/* Change color on hover */
 .navbar a:hover {
   background-color: #ddd;
-  color: black;
+  color: rgba(0, 0, 0, 0);
+}
+
+.navbar {
+  animation: blink 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: #e0f0fd;
+  }
 }
 
 .row {
@@ -77,27 +105,122 @@ body {
 
 .footer {
   padding: 20px;
-  text-align: center;
   background-image: url(Photos/footer.jpg);
   background-size: cover;
   width: 100vw;
   height: 33vh;
   display: flex;
   flex-wrap: wrap;
-  flex-flow: column;
+  flex-flow: row;
+}
+.email {
+  padding-left: 16px;
+  font-size: 21px;
+}
+
+.boxLinks {
+  flex-flow: row;
+  width: 1445px;
+  margin-top: 5px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.342);
+  border: 2px solid #333;
+  border-color: rgba(11, 126, 146, 0.452);
+  border-radius: 8px;
+}
+
+a {
+  color: rgb(100, 229, 252);
+  text-shadow: 5px 5px 8px rgba(43, 48, 58, 0.068),
+    10px 10px 8px rgba(42, 48, 59, 0.048), 15px 15px 8px rgba(33, 40, 53, 0);
+}
+
+a:link {
+  color: rgb(166, 232, 236);
+  text-decoration: none;
+  text-shadow: 5px 5px 8px rgba(43, 48, 58, 0.24),
+    10px 10px 8px rgba(42, 48, 59, 0.116), 15px 15px 8px rgba(33, 40, 53, 0);
+}
+
+a:hover {
+  color: rgb(238, 244, 245);
+
+  text-decoration: underline rgb(87, 163, 167);
+  transition-duration: 0.7s;
+  text-shadow: 5px 5px 8px rgba(43, 48, 58, 0.678),
+    10px 10px 8px rgba(42, 48, 59, 0.336), 15px 15px 8px rgba(33, 40, 53, 0.219);
+}
+
+a:active {
+  background-color: rgba(145, 205, 212, 0.459);
+  font-style: none;
+  transition-duration: 0.3s;
+}
+
+.email {
+  text-align: center;
+}
+.box2 {
+  width: 400vw;
+  margin-top: 7px;
+  padding: 15px;
+  background: rgba(209, 197, 180, 0.5);
+  border: 2px solid #333;
+  border-color: rgba(11, 126, 146, 0.452);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.box3 {
+  width: 400vw;
+  position: absolute;
+}
+
+.box4 {
+  width: auto;
+  margin-left: 8px;
+  padding: 4px;
+  background: rgba(125, 161, 161, 0.4);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.Air-Wiki {
+  padding-right: 20px;
+}
+
+.hotel {
+  padding-right: 20px;
+}
+
+.resume {
+  padding-right: 20px;
+}
+
+.allstar {
+  padding-right: 20px;
 }
 
 @media screen and (max-width: 800px) {
   .row,
   .navbar {
     flex-direction: column;
+    overflow-x: hidden;
   }
   body {
     overflow-x: hidden;
   }
-}
-/* @media screen and (max-width: 570px) { */
-/* .row,
+
   .navbar {
-    flex-direction: column;
-  } */
+    position: static;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .email,
+  .boxLinks {
+    flex-flow: row;
+    width: 450px;
+    margin-top: 5px;
+  }
+}

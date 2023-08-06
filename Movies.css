@@ -1,13 +1,10 @@
 body {
-  margin: 0;
-  /* box-sizing: border-box; */
-}
-
-body {
   font-family: Arial;
   margin: 0;
   max-width: 100%;
   overflow-x: hidden;
+
+  background-color: black;
 }
 
 .headerBox {
@@ -20,24 +17,59 @@ body {
   background-image: url(Photos/AllCharacters.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
   height: 61.25vh;
 }
+
 .BoxOfMovies {
-  margin-left: 5vw;
-  margin-right: 5vw;
+  background-image: url(Photos/StarFighter.jpg);
+  background-position: center;
+  background-size: 110% 100%;
+  margin-top: -1.7%;
+  background-repeat: no-repeat;
 }
-.gallery {
+
+h2 {
+  color: white;
+  padding-top: 2%;
+  text-align: center;
+  font-size: 2em;
+  border-color: #d4ecff;
+  text-shadow: 1px 1px 1px#d4ecff, 1px 1px 5px #d4ecff, 1px 1px 1px #d4ecff;
+}
+
+.Item {
+  animation: blink1 12s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink1 {
+  50% {
+    border-color: #d4ecff;
+    box-shadow: 1px 1px 1px#d4ecff, 1px 1px 5px #d4ecff, 1px 1px 1px #d4ecff;
+  }
+}
+.Item {
   border: 1px solid #ccc;
+  background-color: #7777774f;
+  color: white;
+  box-shadow: 5px 5px 8px rgba(145, 168, 208, 0.077),
+    10px 10px 8px rgba(145, 168, 208, 0.071),
+    15px 15px 8px rgba(145, 168, 208, 0.027);
+  border-radius: 2%;
+  margin: 5%;
+  top: auto;
+  padding-bottom: 5%;
 }
 
-.gallery:hover {
+.Item:hover {
   border: 1px solid #777;
+  background-color: #dddddd8f;
+  transition: 1s;
 }
 
-.gallery img {
+.Item img {
   width: 100%;
-  height: 30vh;
+  height: 45vh;
 }
 
 .desc {
@@ -49,7 +81,7 @@ body {
   box-sizing: border-box;
 }
 
-.responsive {
+.ItemsGrid {
   padding: 0 10px;
   padding-bottom: 10px;
   float: left;
@@ -57,14 +89,14 @@ body {
 }
 
 @media only screen and (max-width: 700px) {
-  .responsive {
+  .ItemsGrid {
     width: 49.99999%;
     margin: 6px 0;
   }
 }
 
 @media only screen and (max-width: 520px) {
-  .responsive {
+  .ItemsGrid {
     width: 100%;
   }
 }
