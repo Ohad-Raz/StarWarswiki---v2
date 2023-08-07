@@ -102,7 +102,7 @@ button:hover {
 .BoxContactFrm {
   display: flex;
   margin: 0 auto;
-  width: 880px;
+  width: 55vw;
   padding: 20px;
   background: rgba(180, 225, 236, 0.277);
   border: 6px solid #505253;
@@ -163,10 +163,13 @@ select:focus {
   .box3,
   .navbar {
     flex-direction: column;
+    overflow-x: hidden;
   }
-  .box3 {
+  .row {
+    display: flex;
   }
   body {
     overflow-x: hidden;
+    width: 200%;
   }
 }
